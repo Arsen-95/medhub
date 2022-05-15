@@ -1,7 +1,11 @@
 import { Box, Image, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 
-const MenuItem = ({ children, href }) => {
+type Props = {
+  href: string;
+};
+
+const MenuItem: React.FC<Props> = ({ children, href }) => {
   return (
     <NextLink href={href} passHref>
       <Link
